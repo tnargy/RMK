@@ -1,50 +1,151 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
 name = "RMK Keyboard"
-product_name = "RMK Keyboard"
-vendor_id = 0x4c4b
-product_id = 0x4643
-manufacturer = "haobo"
+product_name = "Ferris Sweep"
+vendor_id = 0xC2AB
+product_id = 0x3939
+manufacturer = "DPB"
 chip = "rp2040"
-
-[matrix]
-# Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-output_pins = ["PIN_19", "PIN_20", "PIN_21"]
-# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
-# row2col = true
 
 [layout]
 rows = 4
-cols = 3
-layers = 2
+cols = 10
+layers = 8
 keymap = [
     [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
-    ],
-    [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
+        ["KC_Q"        , "KC_W"        , "KC_E"           , "KC_R"          , "KC_T",
+         "KC_Y"        , "KC_U"        , "KC_I"           , "KC_O"          , "KC_P",
+
+         "LSFT_T(KC_A)", "LT(5,KC_S)"  , "LT(1,KC_D)"     , "LT(3,KC_F)"    , "KC_G",
+         "KC_H"        , "LT(4,KC_J)"  , "LT(2,KC_K)"     , "LT(6,KC_L)"    , "LSFT_T(KC_SCLN)",
+
+         "KC_Z"        , "LCTL_T(KC_X)", "LALT_T(KC_C)"   , "KC_V"          , "KC_B",
+         "KC_N"        , "KC_M"        , "LALT_T(KC_COMM)", "LCTL_T(KC_DOT)", "KC_SLSH",
+
+         "KC_P0"       , "KC_BSPC",
+         "LT(7,KC_SPC)", "KC_P1"
+        ],
+        ["KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_BTN1"     , "KC_WH_U"        , "KC_BTN2"       , "KC_TRNS",
+
+         "KC_TRNS"     , "KC_BTN2"     , "KC_NO"          , "KC_BTN1"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_MS_L"     , "KC_MS_D"        , "KC_MS_U"       , "KC_MS_R",
+
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_WH_L"     , "KC_WH_D"        , "KC_WH_R"       , "KC_TRNS",
+
+         "KC_TRNS"     , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"
+        ],
+        ["KC_TRNS"     , "KC_TRNS"     , "KC_PGUP"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_LEFT"     , "KC_UP"       , "KC_DOWN"        , "KC_RGHT"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_LGUI"     , "KC_NO"          , "LCTL(KC_LALT)" , "LCA(KC_LSFT)",
+
+         "KC_TRNS"     , "KC_HOME"     , "KC_PGDN"        , "KC_END"        , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_TRNS"     , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"
+        ],
+        ["KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_UNDS"     , "KC_PIPE"        , "KC_QUOT"       , "KC_TRNS",
+
+         "KC_CIRC"     , "KC_ASTR"     , "KC_AMPR"        , "KC_NO"         , "KC_TRNS",
+         "KC_HASH"     , "KC_TILD"     , "KC_SLSH"        , "KC_DQUO"       , "KC_DLR",
+
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_MINS"     , "KC_BSLS"        , "KC_GRV"        , "KC_TRNS",
+
+         "RM_PREV"    , "KC_TRNS",
+         "KC_TRNS"     , "RM_NEXT"
+        ],
+        ["KC_TRNS"     , "KC_COLN"     , "KC_LT"          , "KC_GT"         , "KC_SCLN",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_LCBR"     , "KC_RCBR"     , "KC_LPRN"        , "KC_RPRN"       , "KC_AT",
+         "KC_TRNS"     , "KC_NO"       , "KC_EQL"         , "KC_PLUS"       , "KC_PERC",
+
+         "KC_TRNS"     , "KC_EXLM"     , "KC_LBRC"        , "KC_RBRC"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_VOLD"     , "KC_TRNS",
+         "KC_TRNS"     , "KC_VOLU"
+        ],
+        ["KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_F7"       , "KC_F8"          , "KC_F9"         , "KC_F10",
+
+         "KC_TRNS"     , "KC_NO"       , "LCTL(KC_LALT)"  , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_F4"       , "KC_F5"          , "KC_F6"         , "KC_F11",
+
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+         "KC_TRNS"     , "KC_F1"       , "KC_F2"          , "KC_F3"         , "KC_F12",
+
+         "KC_TRNS"     , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"
+        ],
+        ["KC_PSLS"     , "KC_7"        , "KC_8"           , "KC_9"          , "KC_PPLS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_0"        , "KC_1"        , "KC_2"           , "KC_3"          , "KC_PMNS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_NO"         , "KC_TRNS",
+
+         "KC_PAST"     , "KC_4"        , "KC_5"           , "KC_6"          , "KC_PEQL",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_TRNS"     , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"
+        ],
+        ["KC_TRNS"     , "KC_TRNS"     , "KC_COLN"        , "KC_ESC"        , "KC_TRNS",
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_TRNS"       , "KC_DEL",
+
+         "KC_TRNS"     , "KC_PERC"     , "KC_SLSH"        , "KC_ENT"        , "KC_TRNS",
+         "DF(1)"       , "KC_LGUI"     , "KC_TRNS"        , "KC_TRNS"       , "KC_TRNS",
+
+         "KC_TRNS"     , "KC_TRNS"     , "KC_TRNS"        , "KC_EXLM"       , "KC_TRNS",
+         "DF(0)"       , "KC_TRNS"     , "RALT_T(KC_COMM)", "RCTL_T(KC_DOT)", "QK_BOOT",
+
+         "KC_TRNS"     , "KC_TAB",
+         "KC_NO"       , "KC_TRNS"
+        ]
     ],
 ]
-
-[light]
-# All light pins are high-active by default, uncomment if you want it to be low-active
-# capslock.pin = "PB2"
-# capslock.low_active = true
-# scrolllock.pin = "PA3"
-# scrolllock.low_active = true
-# Just ignore if no light pin is used for it
-# numslock.pin = "PA5"
-# numslock.low_active = true
-
-
-
 [storage]
-# Storage feature is enabled by default
-# enabled = false
+
+[behavior]
+tap_hold = { enable_hrm = true, prior_idle_time = "120ms", hold_timeout = "250ms", post_wait_time = "50ms"}
+
+[split]
+connection = "serial"
+
+# we are defining the left side to be our primary.
+[split.central]
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 0
+serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
+[split.central.matrix]
+matrix_type = "direct_pin"
+direct_pins=[
+    ["PIN_7", "PIN_26", "PIN_27", "PIN_28", "PIN_29", ],
+    ["PIN_22", "PIN_20", "PIN_23", "PIN_21", "PIN_0", ],
+    ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6", ],
+    ["_", "_", "_", "PIN_8", "PIN_9", ],
+]
+
+[[split.peripheral]]
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 5
+serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
+[split.peripheral.matrix]
+matrix_type = "direct_pin"
+direct_pins=[
+    ["PIN_29", "PIN_28", "PIN_27", "PIN_26", "PIN_7", ],
+    ["PIN_0", "PIN_21", "PIN_23", "PIN_20", "PIN_22", ],
+    ["PIN_6", "PIN_5", "PIN_4", "PIN_3", "PIN_2", ],
+    ["PIN_9", "PIN_8", "_", "_", "_", ],
+]
