@@ -17,7 +17,7 @@ combos = [
 [layout]
 rows = 4
 cols = 10
-layers = 2
+layers = 3
 keymap = [
     [
         ["A", "B", "C"],
