@@ -138,7 +138,7 @@ rows = 4
 cols = 5
 row_offset = 0
 col_offset = 0
-serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
+serial = [{ instance = "UART0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
 [split.central.matrix]
 matrix_type = "direct_pin"
 direct_pins=[
@@ -153,7 +153,7 @@ rows = 4
 cols = 5
 row_offset = 0
 col_offset = 5
-serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
+serial = [{ instance = "UART0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
 [split.peripheral.matrix]
 matrix_type = "direct_pin"
 direct_pins=[
