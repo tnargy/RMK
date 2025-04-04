@@ -19,16 +19,16 @@ rows = 4
 cols = 10
 layers = 8
 keymap = [
-    [
-        ["Q"        , "W"        , "E"           , "R"          , "T",
-         "Y"        , "U"        , "I"           , "O"          , "P",],
-         ["MT(A,LShift)", "LT(5,S)"  , "LT(1,D)"     , "LT(3,F)"    , "G",
-         "H"        , "LT(4,J)"  , "LT(2,K)"     , "LT(6,L)"    , "MT(Semicolon,RShift)",],
-         ["Z"        , "MT(X,LCtrl )", "MT(C,LAlt)"   , "V"          , "B",
-         "N"        , "M"        , "MT(Comma,RAlt)", "MT(Dot,RCtrl)", "Slash",],
-         ["Kc0"       , "Backspace",
-         "LT(7,SPC)", "Kc1"]
-    ],
+#    [
+#        ["Q"        , "W"        , "E"           , "R"          , "T",
+#         "Y"        , "U"        , "I"           , "O"          , "P",],
+#         ["MT(A,LShift)", "LT(5,S)"  , "LT(1,D)"     , "LT(3,F)"    , "G",
+#         "H"        , "LT(4,J)"  , "LT(2,K)"     , "LT(6,L)"    , "MT(Semicolon,RShift)",],
+#         ["Z"        , "MT(X,LCtrl )", "MT(C,LAlt)"   , "V"          , "B",
+#         "N"        , "M"        , "MT(Comma,RAlt)", "MT(Dot,RCtrl)", "Slash",],
+#         ["Kc0"       , "Backspace",
+#         "LT(7,SPC)", "Kc1"]
+#    ],
 #    [
 #        ["_"     , "_"     , "_"        , "_"       , "_",
 #         "_"     , "MouseBtn1"     , "MouseWheelUp"        , "MouseBtn2"       , "_",],
