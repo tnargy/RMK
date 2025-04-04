@@ -41,8 +41,8 @@ connection = "serial"
 
 # we are defining the left side to be our primary.
 [split.central]
-rows = 4
-cols = 5
+rows = 2
+cols = 2
 row_offset = 0
 col_offset = 0
 serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
@@ -56,10 +56,10 @@ direct_pins=[
 ]
 
 [[split.peripheral]]
-rows = 4
-cols = 5
-row_offset = 0
-col_offset = 5
+rows = 2
+cols = 1
+row_offset = 2
+col_offset = 2
 serial = [{ instance = "PIO0", tx_pin = "PIN_1", rx_pin = "PIN_1" }]
 [split.peripheral.matrix]
 matrix_type = "direct_pin"
