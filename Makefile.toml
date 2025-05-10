@@ -2,9 +2,7 @@
 install_crate = { rustup_component_name = "llvm-tools" }
 
 [tasks.flip-link]
-install_crate = { crate_name = "flip-link", binary = "flip-link", test_arg = [
-    "-h",
-] }
+install_crate = { crate_name = "flip-link", binary = "flip-link", test_arg = ["-h"] }
 
 [tasks.objcopy-central]
 install_crate = { crate_name = "cargo-binutils", binary = "cargo", test_arg = [
@@ -20,11 +18,15 @@ args = [
     "--",
     "-O",
     "ihex",
-    "RMK_Sweep-central.hex",
+    "rmk-central.hex",
 ]
 dependencies = ["install-llvm-tools", "flip-link"]
 
 [tasks.objcopy-peripheral]
+install_crate = { crate_name = "cargo-binutils", binary = "cargo", test_arg = [
+    "objcopy",
+    "--help",
+] }
 command = "cargo"
 args = [
     "objcopy",
@@ -34,7 +36,7 @@ args = [
     "--",
     "-O",
     "ihex",
-    "RMK_Sweep-peripheral.hex",
+    "rmk-peripheral.hex",
 ]
 dependencies = ["install-llvm-tools", "flip-link"]
 
@@ -47,11 +49,11 @@ command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "RMK_Sweep-central.hex",
+    "rmk-central.hex",
     "--output-path",
-    "RMK_Sweep-central.uf2",
+    "rmk-central.uf2",
     "--family",
-    "rp2040",
+    "nrf52840",
 ]
 dependencies = ["objcopy-central"]
 
@@ -64,11 +66,11 @@ command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "RMK_Sweep-peripheral.hex",
+    "rmk-peripheral.hex",
     "--output-path",
-    "RMK_Sweep-peripheral.uf2",
+    "rmk-peripheral.uf2",
     "--family",
-    "rp2040",
+    "nrf52840",
 ]
 dependencies = ["objcopy-peripheral"]
 
